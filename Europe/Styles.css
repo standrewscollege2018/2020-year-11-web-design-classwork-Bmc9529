@@ -1,5 +1,14 @@
 /* Stylesheet for europe */
-
+.col-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+.colum-left {
+background-color: red;
+}
+.colum-right {
+background-color: blue;
+}
 /* Remove all padding and margins from every tag */
 * {
   padding: 0px;

@@ -1,0 +1,25 @@
+/* sets every tag */
+* {
+  margin:0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+h1 {
+  color: rgb(255, 255, 255);
+}
+.top-container {
+  display: grid;
+  text-align: center;
+}
+.col-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}.left-col {
+  background-color: red;
+}
+.right-col {
+  background-color: blue
+}

@@ -24,6 +24,8 @@ body{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  /* grid-gap: does both top and bottom */
   margin-top: 20px;
 }
 .card{
