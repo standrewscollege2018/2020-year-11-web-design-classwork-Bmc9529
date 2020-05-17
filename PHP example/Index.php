@@ -22,11 +22,18 @@
       }
 
       // do {} while () Loop
-      $counter = 1;
+      $counter = 10;
       do {
-        echo("<p>$counter</p>");
-        $counter += 1;
-      } while ($counter <= 10);
+        if ($counter > 0) {
+          echo("<p>$counter</p>");
+          $counter = $counter - 1;
+        } else {
+          echo("<h1>Blast off!</h1>");
+          $counter = $counter - 1;
+        }
+
+      } while ($counter >= 0);
+
 
      ?>
 
