@@ -1,0 +1,54 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+.top-banner {
+  text-align: center;
+  font-size: 20px;
+  padding: 40px;
+  background-color: rgb(10, 0, 70);
+  color: white;
+}
+
+.col-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.left-col {
+  background-color: rgb(70, 60, 118);
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.right-col {
+  background-color: rgb(130, 157, 184);
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (max-width: 909px) {
+  .right-col {
+    grid-column: span 2;
+  }
+  .left-col {
+    /* makes it take up two columns */
+    grid-column: span 2;
+  }
+}
+
+.Image {
+  /* use text align for text and images */
+  text-align: center;
+}
+.Image img{
+    max-height: 500px;
+}
