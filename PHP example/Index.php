@@ -35,6 +35,24 @@
       } while ($counter >= 0);
 
 
+      $counter = 1;
+      do {
+        if ($counter % 3 == 0 and $counter % 5 == 0) {
+          echo("<p>FizzBuzz</p>");
+          $counter += 1;
+        } else if ($counter % 5 == 0) {
+          echo("<p>Buzz</p>");
+          $counter += 1;
+        } elseif ($counter % 3 == 0) {
+          echo("<p>Fizz</p>");
+          $counter += 1;
+        }  else {
+          echo("<p>$counter</p>");
+          $counter = $counter + 1;
+        }
+      } while ($counter <= 100);
+
+
      ?>
 
   </body>
