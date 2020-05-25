@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <form action="greetings.php" method="post">
+    <form action="Fizzbuzzweb.php" method="post">
       Enter Number:
       <input type="text" name="FizzBuzz" placeholder="FizzBuzz Length">
       <button type="Submit" name="button">Go!</button>

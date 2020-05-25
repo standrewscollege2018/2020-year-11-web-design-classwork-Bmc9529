@@ -6,8 +6,11 @@
   </head>
   <body>
     <?php
+      // checks if post is not set
+      if (!isset($_POST['FizzBuzz'])) {
+      }
+      
       $fizzbuzz = $_POST['FizzBuzz'];
-
       $counter = 1;
       do {
         if ($counter % 3 == 0 and $counter % 5 == 0) {
