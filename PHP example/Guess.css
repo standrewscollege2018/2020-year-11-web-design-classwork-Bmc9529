@@ -1,0 +1,30 @@
+.BackButton {
+  text-align: center;
+  background-color: red;
+}
+
+.GuessBoxContainer {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.filler {
+  max-width: 400px;
+}
+
+.GuessBox {
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+  background-color: red;
+  max-width: 400px;
+}
+.Button {
+  background-color: blue;
+}
+
+.InputBox {
+  margin-top: 100px;
+  text-align: center;
+  background-color: red;
+}
