@@ -28,6 +28,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="FizzBuzz.css">
     <title></title>
   </head>
   <body>
@@ -35,16 +36,16 @@
       $counter = 1;
       do {
         if ($counter % 3 == 0 and $counter % 5 == 0) {
-          echo("<p>FizzBuzz</p>");
+          echo("<p class='FizzBuzz'>FizzBuzz</p>");
           $counter += 1;
         } else if ($counter % 5 == 0) {
-          echo("<p>Buzz</p>");
+          echo("<p class='Buzz'>Buzz</p>");
           $counter += 1;
         } elseif ($counter % 3 == 0) {
-          echo("<p>Fizz</p>");
+          echo("<p class='Fizz'>Fizz</p>");
           $counter += 1;
         }  else {
-          echo("<p>$counter</p>");
+          echo("<p class='Number'>$counter</p>");
           $counter = $counter + 1;
         }
       } while ($counter != ($fizzbuzz + 1));

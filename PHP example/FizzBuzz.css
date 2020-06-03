@@ -1,0 +1,21 @@
+.Video{
+  text-align: center;
+}
+
+.FizzBuzz {
+  color: red;
+  font-size: 100px;
+}
+.Buzz {
+  font-size: 20px;
+  color: yellow;
+}
+.Fizz {
+  font-size: 10px;
+  color: blue;
+}
+.Number{
+  color: pink;
+  text-align: right;
+
+}
