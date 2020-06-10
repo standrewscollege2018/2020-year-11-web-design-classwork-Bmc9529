@@ -1,0 +1,25 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.Table {
+  display: grid ;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px;
+}
+.Table p {
+  font-size: 50px;
+}
+.Name {
+  text-align: center;
+  border:4px solid rgb(0, 0, 0);
+}
+.Last {
+  text-align: center;
+  border:4px solid rgb(0, 0, 0);
+  margin: 0px -4px 0px -4px;
+}
+.Tutor {
+  text-align: center;
+  border:4px solid rgb(0, 0, 0);
+}
