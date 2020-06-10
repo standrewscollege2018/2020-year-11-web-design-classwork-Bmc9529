@@ -6,8 +6,8 @@
   </head>
   <body>
     <form action="Results.php" method="post">
-      Enter a first name:
-      <input required type="text" name="EnterName" placeholder="First name">
+      Enter a name:
+      <input required type="text" name="EnterName" placeholder="Name">
       <button type="Submit" name="button">GOOOOOOOOOOOOOOOOOOOO!</button>
     </form>
 
