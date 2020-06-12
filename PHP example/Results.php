@@ -1,17 +1,17 @@
 <?php
   // this page will run a query and display the result(s)
 
-  // we include the dbconnect.php code
+  // we include the dbconnect.php code anything with database do this
   include("DBConnect.php");
 
   // from post for a FirstName
-  if (isset($_POST['EnterName'])) {
+  if (!isset($_POST['EnterName'])) {
+    header("Location: Search.php");
+  } else {
     $EnterName = $_POST['EnterName'];
     // there are 3 steps to running a select query
     // 1. set up the query in a variable
     $Results_sql = "SELECT * FROM student WHERE FirstName LIKE '%$EnterName%' OR LastName LIKE '%$EnterName%' ";
-  } else {
-    $Results_sql = "SELECT * FROM student WHERE FirstName LIKE 'E%' ";
   }
 
   // $EnterName = $_POST['EnterName'];
@@ -29,11 +29,6 @@
   // we use the mysqli_fetch_assoc() function
   $Results_aa = mysqli_fetch_assoc($Results_qry);
 
-  // display info
-  $FirstName = $Results_aa['FirstName'];
-  $LastName = $Results_aa['LastName'];
-  $TutorGroup= $Results_aa['TutorGroup'];
-
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -45,10 +40,27 @@
   <body>
     <div class="Table">
       <?php
-        echo "<p class='Name'>$FirstName</p>";
-        echo "<p class='Last'>$LastName</p>";
-        echo "<p class='Tutor'>$TutorGroup</p>";
+
+        // loop through $Results_aa to display all results
+        do {
+          // display info
+          $FirstName = $Results_aa['FirstName'];
+          $LastName = $Results_aa['LastName'];
+          $TutorGroup= $Results_aa['TutorGroup'];
+          // echos the stuff
+          echo "<p class='Name'>$FirstName</p>";
+          echo "<p class='Last'>$LastName</p>";
+          echo "<p class='Tutor'>$TutorGroup</p>";
+        } while ($Results_aa = mysqli_fetch_assoc($Results_qry));
+        // the while condition is just the third step of our process
+        // of running the query.
+        // It effectively means we repeat
+
+
        ?>
     </div>
+    <marquee behavior="scroll" scrollamount="5" direction="up">
+      <img src="PHP example\Images\FckEthanGang.gif" alt="fckethan dance">
+    </marquee>
   </body>
 </html>
