@@ -24,22 +24,19 @@
   // we use mysqli_query(). this takes two parameters: dbconnect and query
   $Results_qry = mysqli_query($DBConnect, $Results_sql);
 
-  // 3. we organise our results into a associative array
-  // Bascially we can use the colum headings from the database table
-  // we use the mysqli_fetch_assoc() function
-  $Results_aa = mysqli_fetch_assoc($Results_qry);
+  // check if there are any results to display
+  // use mysqli_num_rows(), which counts the number of results
+  if (mysqli_num_rows($Results_qry) == 0) {
+    echo "<h1>No results found</h1>";
+  } else {
+    // 3. we organise our results into a associative array
+    // Bascially we can use the colum headings from the database table
+    // we use the mysqli_fetch_assoc() function
+    $Results_aa = mysqli_fetch_assoc($Results_qry);
 
- ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="Results.css">
-    <title></title>
-  </head>
-  <body>
+    ?>
     <div class="Table">
-      <?php
+    <?php
 
         // loop through $Results_aa to display all results
         do {
@@ -56,11 +53,26 @@
         // of running the query.
         // It effectively means we repeat
 
-
-       ?>
+    ?>
     </div>
-    <marquee behavior="scroll" scrollamount="5" direction="up">
-      <img src="PHP example\Images\FckEthanGang.gif" alt="fckethan dance">
+    <?php
+  }
+  ?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Results.css">
+    <title></title>
+  </head>
+  <body>
+    <marquee behavior="scroll" scrollamount="5000" direction="right">
+      <img src="Images\FckEthanGang.gif" alt="fckethan dance">
+      <img src="Images\FckEthanGang.gif" alt="fckethan dance">
+      <img src="Images\FckEthanGang.gif" alt="fckethan dance">
+      <img src="Images\FckEthanGang.gif" alt="fckethan dance">
+      <img src="Images\FckEthanGang.gif" alt="fckethan dance">
+      <img src="Images\FckEthanGang.gif" alt="fckethan dance">
     </marquee>
   </body>
 </html>
