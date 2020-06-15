@@ -43,7 +43,7 @@
           // display info
           $FirstName = $Results_aa['FirstName'];
           $LastName = $Results_aa['LastName'];
-          $TutorGroup= $Results_aa['TutorGroup'];
+          $TutorGroup= $Results_aa['TutorGroupId'];
           // echos the stuff
           echo "<p class='Name'>$FirstName</p>";
           echo "<p class='Last'>$LastName</p>";
