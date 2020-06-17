@@ -1,0 +1,41 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Topbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  background-color: black;
+}
+
+.Nav {
+  text-align: center;
+  padding: 15px;
+
+}
+.Logo {
+  font-size: 50px;
+  color: white;
+}
+.Search {
+  padding: 10px 10px;
+  text-align: center;
+  padding: 20px;
+
+}
+.Nav a {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.Nav a:hover {
+  background-color: grey;
+}
+.Button {
+  font-size: 18px;
+}
+.Input{
+  font-size: 18px;
+}
